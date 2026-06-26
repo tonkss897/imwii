@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMWI — Пир Дракона</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/js.js" charset="UTF-8" defer></script>
+</head>
+<body>
+<div class="bg-anim"><div class="bg-blob"></div><div class="bg-blob"></div><div class="bg-blob"></div></div>
+<div class="scroll-line" id="scrollLine"></div>
+<nav>
+    <a class="nav-logo" href="index.html">IMWI</a>
+    <div class="nav-links">
+        <a href="index.html#programs">Программы</a>
+        <a href="home.html">О нас</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+    </div>
+</nav>
+
+<div class="page-wrap pir-page">
+
+    <!-- HERO — фон статичный, контент скроллится -->
+    <section class="pir-hero">
+        <div class="pir-hero__bg" style="background-image:url('./img/pir-hall.jpg')"></div>
+        <div class="pir-hero__overlay"></div>
+        <div class="pir-hero__content">
+            <h1 class="pir-hero__title">ПИР ДРАКОНА</h1>
+            <a href="#pir-cal" class="btn btn-filled"
+               onclick="document.getElementById('pir-cal').scrollIntoView({behavior:'smooth'});return false;">
+               ВЫБРАТЬ ДАТУ
+            </a>
+        </div>
+    </section>
+
+    <!-- ОПИСАНИЕ -->
+    <section class="pir-desc fade-in">
+        <h2>Пир Дракона.<br>Императорский Китай.</h2>
+        <div class="pir-desc__cols">
+            <div class="pir-desc__left fade-in-left">
+                <p class="pir-desc__sub">Режиссёр U-Wei<br>Концепт-шеф Wei Wan</p>
+                <p>Свет фонарей, золото дворцов, дым благовоний и древние легенды оживают вокруг зрителя. «Пир Дракона» — иммерсивное гастрономическое шоу, вдохновлённое атмосферой императорского Китая.</p>
+                <p>Во время вечера гости проходят через несколько сцен, посвящённых образам китайской культуры: огню, нефриту, красному шёлку, чайным ритуалам и символике дракона. Свет, музыка и визуальные эффекты постепенно меняют пространство, создавая ощущение путешествия внутри легенды. Каждое блюдо становится частью повествования и продолжает атмосферу сцены.</p>
+            </div>
+            <div class="pir-desc__right fade-in-right">
+                <ul>
+                    <li>Семь блюд гастрономического сета</li>
+                    <li>Два часа проекционного шоу</li>
+                    <li>Иммерсивный звук</li>
+                    <li>Древний Китай</li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:3vw">
+            <a href="tickets.html" class="btn btn-filled">КУПИТЬ БИЛЕТЫ</a>
+        </div>
+    </section>
+
+    <!-- ГАСТРОНОМИЧЕСКИЙ СЕТ -->
+    <h2 class="gastro-title fade-in">ГАСТРОНОМИЧЕСКИЙ СЕТ</h2>
+    <p class="gastro-desc fade-in">Каждое блюдо в «Пире Дракона» связано с отдельным образом китайской культуры — от света бумажных фонарей до энергии дракона и спокойствия чайных садов. Вкус, аромат и визуальные эффекты становятся частью единого иммерсивного действия.</p>
+
+    <!-- Слайдер сета -->
+    <div class="food-slider">
+        <div class="food-slides" id="pirFoodSlider">
+            <div class="food-slide"><img src="./img/пир_дракона_сет1.png" alt="Сет 1"></div>
+            <div class="food-slide"><img src="./img/пир_дракона_сет2.png" alt="Сет 2"></div>
+            <div class="food-slide"><img src="./img/пирдраконасет3.png" alt="Сет 3"></div>
+        </div>
+        <div class="food-slider-arrows">
+            <button class="arrow-btn" onclick="slideFoodSlider('pirFoodSlider',-1)">&#8249;</button>
+            <button class="arrow-btn" onclick="slideFoodSlider('pirFoodSlider',1)">&#8250;</button>
+        </div>
+    </div>
+
+    <!-- ВЕГАН -->
+    <div class="vegan-banner fade-in">ПРЕДЛАГАЕМ ВЕГАНСКУЮ АЛЬТЕРНАТИВУ СЕТА</div>
+
+    <!-- КАЛЕНДАРЬ -->
+    <section class="calendar-section fade-in" id="pir-cal">
+        <div id="cal-pir"></div>
+    </section>
+
+    <!-- НАПИТКИ -->
+    <section class="drinks-sect fade-in">
+        <h2 class="drinks-title">НАПИТКИ</h2>
+        <div class="drinks-grid">
+            <div class="drink-card">
+                <img src="./img/вино.png" alt="Винное">
+                <h4>ВИННОЕ</h4>
+                <p>Авторская подборка от сомелье</p>
+            </div>
+            <div class="drink-card">
+                <img src="./img/коктеи_ль.png" alt="Коктейльное">
+                <h4>КОКТЕЙЛЬНОЕ</h4>
+                <p>Коктейли по мотивам легенд о драконах</p>
+            </div>
+            <div class="drink-card">
+                <img src="./img/безалкогольное.png" alt="Безалкогольное">
+                <h4>БЕЗАЛКОГОЛЬНОЕ</h4>
+                <p>Продуманное сочетание сложных вкусов</p>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:3vw">
+            <a href="tickets.html" class="btn btn-filled">КУПИТЬ БИЛЕТЫ</a>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

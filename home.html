@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMWI — О ресторане</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/js.js" charset="UTF-8" defer></script>
+</head>
+<body>
+<div class="bg-anim"><div class="bg-blob"></div><div class="bg-blob"></div><div class="bg-blob"></div></div>
+<div class="scroll-line" id="scrollLine"></div>
+<nav>
+    <a class="nav-logo" href="index.html">IMWI</a>
+    <div class="nav-links">
+        <a href="index.html#programs">Программы</a>
+        <a href="home.html">О нас</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+    </div>
+</nav>
+
+<div class="page-wrap">
+
+    <!-- ШАПКА О НАС -->
+    <section class="about-top">
+        <div class="about-top__text fade-in-left">
+            <h1>О нас</h1>
+            <p>IMWI — иммерсивный ресторан китайской кухни, где ужин превращается в гастрономический спектакль.</p>
+        </div>
+        <div class="about-top__img fade-in-right">
+            <img src="./img/about-bg.jpg" alt="О нас">
+        </div>
+    </section>
+
+    <!-- ИММЕРСИВНЫЙ РЕСТОРАН — ЭТО -->
+    <section class="imm-sect fade-in">
+        <h2 class="imm-sect__title">Иммерсивный ресторан — это</h2>
+        <!-- Карточки открываются по очереди при клике -->
+        <div class="imm-cards" id="immCards">
+            <div class="imm-card" onclick="revealImmCards(0)">
+                <span class="imm-num">1</span>
+                <span class="imm-label">ИСТОРИЯ</span>
+            </div>
+            <div class="imm-card" onclick="revealImmCards(1)">
+                <span class="imm-num">2</span>
+                <span class="imm-label">СВЕТ</span>
+            </div>
+            <div class="imm-card" onclick="revealImmCards(2)">
+                <span class="imm-num">3</span>
+                <span class="imm-label">РИТУАЛ</span>
+            </div>
+            <div class="imm-card" onclick="revealImmCards(3)">
+                <span class="imm-num">4</span>
+                <span class="imm-label">ЭМОЦИИ</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- КТО МЫ И ПОЧЕМУ ПОЯВИЛИСЬ -->
+    <section class="who-sect">
+        <div class="who-sect__label fade-in">КТО МЫ И ПОЧЕМУ ПОЯВИЛИСЬ</div>
+        <div class="who-sect__cols">
+            <div class="wwa-left fade-in-left">
+                <p>Китайская кухня в России часто выглядит одинаково: декорации, повторяющие привычные образы, и рестораны, где атмосфера заканчивается на визуальных клише. Но культура Китая — это ритуалы, философия, истории, эмоции и ощущение погружения.</p>
+            </div>
+            <div class="wwa-right fade-in-right">
+                <p>Мы показываем китайскую культуру по-другому: через современные технологии, иммерсивное пространство и гастрономический театр. Мы создаём место, куда приходят не только ради еды, но и ради впечатления, которое хочется прожить снова.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ВИДЕНИЕ / МИССИЯ / ХАРАКТЕР -->
+    <section class="vision-sect">
+        <div class="vision-col fade-in">
+            <h4>ВИДЕНИЕ</h4>
+            <p>Мы хотим изменить представление о китайской кухне в России. Для нас китайская кухня — это не набор визуальных штампов, а глубокая культура застолья, символов и ритуалов.</p>
+        </div>
+        <div class="vision-col fade-in">
+            <h4>МИССИЯ</h4>
+            <p>Наша миссия — познакомить гостей с китайской культурой через впечатление. Мы хотим, чтобы каждый человек через блюдо прочувствовал его и запомнил этот момент как часть личного опыта.</p>
+        </div>
+        <div class="vision-col fade-in">
+            <h4>ХАРАКТЕР И СУЩНОСТЬ</h4>
+            <p>WU WEI — говорит с человеком, который ценит впечатления, любит необычные места и хочет почувствовать себя частью события. Мы делаем из простых вещей сцену, ритуал и историю.</p>
+        </div>
+    </section>
+
+    <!-- НАШИ ЦЕННОСТИ (крутятся) -->
+    <section class="values-sect fade-in">
+        <h2 class="sec-title">НАШИ ЦЕННОСТИ</h2>
+        <div class="values-wheel">
+            <div class="value-item"><img src="./img/val-kultura.png" alt=""><h5>КУЛЬТУРА</h5></div>
+            <div class="value-item"><img src="./img/val-vkus.png" alt=""><h5>ВКУС</h5></div>
+            <div class="value-item"><img src="./img/val-tech.png" alt=""><h5>ТЕХНОЛОГИИ</h5></div>
+            <div class="value-item"><img src="./img/val-atm.png" alt=""><h5>АТМОСФЕРА</h5></div>
+            <div class="value-item"><img src="./img/val-mem.png" alt=""><h5>ПАМЯТЬ</h5></div>
+            <div class="value-item"><img src="./img/val-pod.png" alt=""><h5>ПОГРУЖЕНИЕ</h5></div>
+        </div>
+    </section>
+
+    <!-- ЦИТАТА -->
+    <section class="about-quote fade-in">
+        <p>IMWI — это место, где<br>еда становится легендой.</p>
+        <div class="about-quote__sub">
+            <span>УВИДЕТЬ</span><span class="dot">•</span>
+            <span>ПОЧУВСТВОВАТЬ</span><span class="dot">•</span>
+            <span>ПРОЖИТЬ</span>
+        </div>
+        <div class="about-quote__btns">
+            <a href="index.html#programs" class="btn btn-filled">К ПРОГРАММАМ</a>
+            <a href="tickets.html" class="btn">КУПИТЬ БИЛЕТЫ</a>
+        </div>
+    </section>
+
+    <div class="page-logo-end">IMWI</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+.tickets-page {
+  padding: 6vw 8vw;
+}
+
+.tickets-page h1 {
+  font-size: 3vw;
+  letter-spacing: 0.15em;
+  margin-bottom: 3vw;
+  text-align: center;
+}
+
+.ticket-filter {
+  display: flex;
+  gap: 1vw;
+  margin-bottom: 4vw;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tf-btn {
+  padding: 0.8vw 2vw;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text2);
+  cursor: pointer;
+  font-size: 0.85vw;
+  letter-spacing: 0.15em;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-family: 'Georgia', serif;
+}
+
+.tf-btn.active,
+.tf-btn:hover {
+  border-color: var(--red3);
+  color: var(--text);
+  background: rgba(139, 0, 0, 0.2);
+}
+
+.ticket-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5vw;
+}
+
+.ticket-card {
+  border: 1px solid var(--border);
+  background: rgba(15, 0, 0, 0.6);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.ticket-card:hover {
+  border-color: var(--red);
+}
+
+.ticket-card img {
+  width: 100%;
+  height: 18vw;
+  object-fit: cover;
+}
+
+.tc-info {
+  padding: 2vw;
+}
+
+.tc-info h3 {
+  font-size: 1.3vw;
+  letter-spacing: 0.1em;
+  margin-bottom: 1vw;
+}
+
+.tc-info .price {
+  font-size: 1.1vw;
+  color: var(--text2);
+  margin-bottom: 1.5vw;
+}
+
+.tc-btns {
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+}

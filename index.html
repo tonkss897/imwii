@@ -3,50 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMWI</title>
-    <link rel="stylesheet" href="style.css">
+    <title>IMWI — Иммерсивный ресторан</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/js.js" charset="UTF-8" defer></script>
 </head>
 <body>
 
-<header>
-    <div class="container nav">
-        <a class="logo">IMWI</a>
+<div class="bg-anim">
+    <div class="bg-blob"></div>
+    <div class="bg-blob"></div>
+    <div class="bg-blob"></div>
+</div>
+<div class="scroll-line" id="scrollLine"></div>
 
-        <nav>
-            <a href="#">Программы</a>
-            <a href="#">О нас</a>
-            <a href="#">Билеты</a>
-            <a href="#">Контакты</a>
-        </nav>
+<!-- NAV -->
+<nav>
+    <a class="nav-logo" href="index.html">IMWI</a>
+    <div class="nav-links">
+        <a href="index.html#programs">Программы</a>
+        <a href="home.html">О нас</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
     </div>
-</header>
+</nav>
 
-<section class="hero">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-        <h1>IMWI</h1>
-
-        <p>
-            Иммерсивный ресторан<br>
-            китайской кухни
-        </p>
-
-        <div class="buttons">
-            <a href="#" class="btn red">
-                Купить билеты
-            </a>
-
-            <a href="#" class="btn">
-                Сертификаты
-            </a>
+<!-- HERO — клик открывает контент -->
+<section class="hero" id="hero" onclick="revealHero()">
+    <img src="./img/hero-bg.png" class="hero-bg-img" alt="">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content" id="heroContent">
+        <h1 class="hero-title">IMWI</h1>
+        <p class="hero-subtitle">Иммерсивный ресторан<br>китайской кухни</p>
+        <div class="hero-btns">
+            <a href="tickets.html" class="btn btn-filled" onclick="event.stopPropagation()">КУПИТЬ БИЛЕТЫ</a>
         </div>
+    </div>
+    <span class="hero-hint" id="heroHint">нажмите, чтобы войти</span>
+</section>
 
+<!-- О РЕСТОРАНЕ -->
+<section class="about-rest fade-in" id="about-rest">
+    <div class="about-rest__text">
+        <p>IMWI — иммерсивный ресторан, вдохновлённый китайской мифологией и культурой застолья. Анимированные проекции, синхронная подача блюд, свет, звук и цифровые декорации превращают ужин в масштабный спектакль, где еда становится частью истории.</p>
+        <p>Каждый вечер в IMWI — <em>отдельная история</em>, которую можно увидеть, почувствовать и прожить.</p>
+        <div class="about-rest__links">
+            <span>ОЩУЩАТЬ</span>
+            <span class="dot">|</span>
+            <span>ПОГРУЖАТЬСЯ</span>
+            <span class="dot">|</span>
+            <span>ПРОЖИВАТЬ</span>
+        </div>
+    </div>
+    <!-- Слайдер со стрелками -->
+    <div class="about-rest__slider">
+        <div class="slider-wrap" id="homeSlider">
+            <img src="./img/pir-hall.jpg" class="active" alt="Пир Дракона">
+            <img src="./img/lotus-hall.jpg" alt="Сад Лотоса">
+            <img src="./img/fenix-hall.jpg" alt="Ритуал Феникса">
+        </div>
+        <div class="slider-arrows">
+            <button class="arrow-btn" onclick="slideImages('homeSlider',-1)">&#8249;</button>
+            <button class="arrow-btn" onclick="slideImages('homeSlider',1)">&#8250;</button>
+        </div>
+    </div>
+</section>
+
+<!-- НАШИ ПРОГРАММЫ -->
+<section id="programs">
+    <h2 class="sec-title fade-in">НАШИ ПРОГРАММЫ</h2>
+
+    <!-- ПИР ДРАКОНА -->
+    <div class="program-row fade-in">
+        <img src="./img/pir-hall.jpg" alt="Пир Дракона">
+        <div class="program-row__info">
+            <h3>ПИР ДРАКОНА</h3>
+            <p>Вы окажетесь прямком среди легенд императорского Китая. Свет, дым, дракон и проекции превращают пространство в масштабное шоу, где каждое блюдо становится частью истории.</p>
+            <div class="program-row__btns">
+                <a href="pirdracona.html" class="btn">О ШОУ</a>
+                <a href="tickets.html" class="btn btn-filled">КУПИТЬ БИЛЕТЫ</a>
+            </div>
+        </div>
     </div>
 
+    <!-- САД ЛОТОСА (реверс) -->
+    <div class="program-row program-row--reverse fade-in">
+        <img src="./img/lotus-hall.jpg" alt="Сад Лотоса">
+        <div class="program-row__info">
+            <h3>САД ЛОТОСА</h3>
+            <p>Вы окажетесь в мире тишины, гармонии и созерцания, вдохновлённом садами древнего Китая. Каждое блюдо продолжает историю через баланс и равновесие.</p>
+            <div class="program-row__btns">
+                <a href="lotos.html" class="btn">О ШОУ</a>
+                <a href="tickets.html" class="btn btn-filled">КУПИТЬ БИЛЕТЫ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- РИТУАЛ ФЕНИКСА -->
+    <div class="program-row fade-in">
+        <img src="./img/fenix-hall.jpg" alt="Ритуал Феникса">
+        <div class="program-row__info">
+            <h3>РИТУАЛ ФЕНИКСА</h3>
+            <p>Здесь оживает легенда о Фениксе — символе обновления и живой жизни. Огненные проекции, мерцающий свет и иммерсивное пространство наполняют ощущением непрерывного движения.</p>
+            <div class="program-row__btns">
+                <a href="phoenix.html" class="btn">О ШОУ</a>
+                <a href="tickets.html" class="btn btn-filled">КУПИТЬ БИЛЕТЫ</a>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!-- IMWI — ЭТО (4 карточки) -->
+<section class="imwi-is fade-in">
+    <div class="imwi-is__head">
+        <span class="imwi-is__title">imwi</span>
+        <span class="imwi-is__dash"> — это</span>
+        <p class="imwi-is__sub">гастрономический театр со вкусом китая</p>
+    </div>
+    <div class="imwi-cards">
+        <div class="imwi-card fade-in"><img src="./img/rf1.png" alt="Иммерсия"></div>
+        <div class="imwi-card fade-in"><img src="./img/rf2.png" alt="Культура Китая"></div>
+        <div class="imwi-card fade-in"><img src="./img/rf3.png" alt="Авторская кухня"></div>
+        <div class="imwi-card fade-in"><img src="./img/rf4.png" alt="Эмоции"></div>
+    </div>
+</section>
+
+<!-- КАЛЕНДАРЬ (Июнь + Июль) -->
+<section class="calendar-section">
+    <div class="vegan-banner fade-in">ПРЕДЛАГАЕМ ВЕГАНСКУЮ АЛЬТЕРНАТИВУ СЕТОВ</div>
+
+    <!-- Фильтр шоу -->
+    <div class="show-filter fade-in">
+        <button class="sf-btn sf-btn--active" onclick="setShowFilter('all',this)">Все</button>
+        <button class="sf-btn" onclick="setShowFilter('pir',this)">Пир Дракона</button>
+        <button class="sf-btn" onclick="setShowFilter('lotus',this)">Сад Лотоса</button>
+        <button class="sf-btn" onclick="setShowFilter('fenix',this)">Ритуал Феникса</button>
+    </div>
+
+    <div id="cal-june" class="fade-in"></div>
+    <div id="cal-july" class="fade-in" style="margin-top:4vw"></div>
+</section>
+
+<!-- ЧАСТЫЕ ВОПРОСЫ -->
+<section class="faq-sect fade-in">
+    <h2 class="sec-title">ЧАСТЫЕ ВОПРОСЫ</h2>
+    <p class="faq-intro">Здесь мы собрали ответы на частые вопросы наших гостей</p>
+    <div class="faq-grid">
+        <div class="faq-item">
+            <div class="faq-q">Что входит в стоимость билета?<span>+</span></div>
+            <div class="faq-a">В стоимость входит полный гастрономический сет, иммерсивное шоу, пространство и атмосфера вечера. Напитки приобретаются дополнительно.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Как к вам добраться?<span>+</span></div>
+            <div class="faq-a">Мы находимся по адресу: Москва, Бамбуковый лес 2. Ближайшее метро в 5 минутах ходьбы.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Сколько длится спектакль?<span>+</span></div>
+            <div class="faq-a">Продолжительность вечера — около двух часов. Включает несколько актов с подачей блюд между ними.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Нужно ли приходить заранее?<span>+</span></div>
+            <div class="faq-a">Рекомендуем приходить за 15–20 минут до начала. Вход закрывается в момент начала шоу.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Как осуществляется рассадка в театре?<span>+</span></div>
+            <div class="faq-a">Рассадка осуществляется по заранее закреплённым местам. Столы распределяются при оформлении заказа.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Можно ли забронировать стол и место?<span>+</span></div>
+            <div class="faq-a">При оформлении заказа вы можете указать предпочтения по расположению. Мы постараемся их учесть.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Нужно ли приходить заранее?<span>+</span></div>
+            <div class="faq-a">Рекомендуем приходить за 15–20 минут до начала.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Если в сете будут продукты, которые мне нельзя?<span>+</span></div>
+            <div class="faq-a">При оформлении заказа укажите аллергии или непереносимость. Наши повара адаптируют блюда для вас.</div>
+        </div>
+    </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<footer class="home-contacts fade-in">
+    <div class="home-contacts__info">
+        <p>Телефон: <a href="tel:+79958978323">+7 (995) 897-83-23</a></p>
+        <p>Адрес: <a href="#">Москва, Бамбуковый лес 2</a></p>
+        <p>Почта: <a href="mailto:info@wuweiimmersive.ru">info@wuweiimmersive.ru</a></p>
+    </div>
+    <div class="home-contacts__logo">IMWI</div>
+</footer>
 
 </body>
 </html>

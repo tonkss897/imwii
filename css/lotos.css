@@ -1,0 +1,56 @@
+/* ===== SAD LOTOSA ===== */
+.lotus-hero { position: relative; height: 70vh; overflow: hidden; display: flex; align-items: flex-end; padding: 0 8vw 5vw; cursor: pointer; }
+.lotus-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.lotus-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,1) 0%, rgba(10,0,0,0.2) 60%); z-index: 1; }
+.lotus-hero__title { position: relative; z-index: 2; font-size: 5vw; font-weight: 300; opacity: 0; transition: opacity 1s; }
+.lotus-hero__title.revealed { opacity: 1; }
+
+.lotus-about { padding: 4vw 8vw; display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; }
+.lotus-about__col h2 { font-size: 1.8vw; letter-spacing: 0.1em; margin-bottom: 2vw; display: flex; align-items: center; justify-content: space-between; }
+.age-badge { font-size: 0.85vw; color: var(--red3); }
+.lotus-about__col p { font-size: 1vw; line-height: 1.9; color: var(--text2); }
+
+.lotus-full-img { width: 100%; height: 30vw; object-fit: cover; display: block; }
+
+.lotus-food-row { padding: 2vw 8vw 3vw; display: grid; grid-template-columns: 1fr 1fr; gap: 3vw; }
+.lotus-food-col h4 { margin-top: 1vw; letter-spacing: 0.2em; font-size: 0.9vw; }
+.lotus-food-col p { font-size: 0.85vw; color: var(--text3); margin-top: 0.5vw; }
+.lotus-food-img-wrap { position: relative; }
+.lotus-food-img-wrap img { width: 100%; height: 25vw; object-fit: cover; }
+.lotus-food-arrows { position: absolute; bottom: 1vw; left: 1vw; display: flex; gap: 0.5vw; }
+
+/* TEAM */
+.team-sect { padding: 4vw 8vw; display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; align-items: center; }
+.team-img-wrap { position: relative; }
+.team-img-wrap img { width: 100%; height: 35vw; object-fit: cover; }
+.team-arrows { position: absolute; bottom: 1vw; left: 1vw; display: flex; gap: 0.5vw; }
+.team-label { letter-spacing: 0.2em; font-size: 0.8vw; color: var(--text3); margin-bottom: 1vw; }
+.team-info h3 { font-size: 1.1vw; letter-spacing: 0.15em; margin-bottom: 0.5vw; }
+.team-role { font-size: 0.8vw; color: var(--red3); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 2vw; }
+.team-info p { font-size: 0.9vw; line-height: 1.8; color: var(--text2); }
+
+/* ===== FENIX ===== */
+.fenix-top { padding: 6vw 8vw; display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; align-items: center; }
+.fenix-top__text h1 { font-size: 3vw; font-weight: 300; letter-spacing: 0.05em; }
+.fenix-top__text p { font-size: 1vw; line-height: 1.9; color: var(--text2); margin-top: 2vw; }
+.fenix-top__img img { width: 100%; height: 30vw; object-fit: cover; }
+
+.fenix-gastro-title { font-size: 1.8vw; letter-spacing: 0.2em; text-align: center; border: 1px solid var(--border); margin: 3vw 8vw; padding: 1.5vw; text-transform: uppercase; }
+.fenix-food-grid { padding: 0 8vw 3vw; display: grid; grid-template-columns: repeat(3,1fr); gap: 2vw; }
+.fenix-food-grid img { width: 100%; height: 25vw; object-fit: cover; }
+
+/* ===== PIR DRAKONA ===== */
+.pir-hero { position: relative; height: 60vh; overflow: hidden; display: flex; align-items: center; padding: 0 8vw; }
+.pir-hero__bg { position: absolute; inset: 0; background-size: cover; background-position: center; background-attachment: fixed; }
+.pir-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,0,0,0.9) 40%, rgba(10,0,0,0.3)); z-index: 1; }
+.pir-hero__content { position: relative; z-index: 2; }
+.pir-hero__title { font-size: 5vw; font-weight: 300; letter-spacing: 0.1em; margin-bottom: 2vw; }
+
+.pir-desc { padding: 4vw 8vw; }
+.pir-desc h2 { font-size: 2vw; text-align: center; margin-bottom: 3vw; }
+.pir-desc__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; }
+.pir-desc__sub { font-size: 0.85vw; color: var(--text3); margin-bottom: 2vw; }
+.pir-desc__left p, .pir-desc__right p { font-size: 0.95vw; line-height: 1.8; color: var(--text2); margin-bottom: 1vw; }
+.pir-desc__right ul { list-style: none; margin-top: 1vw; }
+.pir-desc__right ul li { font-size: 0.9vw; color: var(--text3); padding: 0.3vw 0; border-bottom: 1px solid rgba(139,0,0,0.1); }
+.pir-desc__right ul li::before { content: '— '; color: var(--red); }

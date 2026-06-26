@@ -1,0 +1,93 @@
+/* ===== PIR DRAKONA PAGE ===== */
+.pir-hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 8vw;
+}
+
+.pir-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10,0,0,0.9) 40%, rgba(10,0,0,0.3));
+  z-index: 1;
+}
+
+.pir-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pir-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.pir-hero-content h1 {
+  font-size: 5vw;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 2vw;
+}
+
+.pir-desc {
+  padding: 4vw 8vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
+}
+
+.pir-desc-title {
+  font-size: 2vw;
+  margin-bottom: 1.5vw;
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.pir-desc-sub {
+  font-size: 0.85vw;
+  color: var(--text3);
+  margin-bottom: 2vw;
+}
+
+.pir-desc p {
+  font-size: 0.95vw;
+  line-height: 1.8;
+  color: var(--text2);
+}
+
+.pir-desc ul {
+  list-style: none;
+  margin-top: 2vw;
+}
+
+.pir-desc ul li {
+  font-size: 0.9vw;
+  color: var(--text3);
+  padding: 0.3vw 0;
+  border-bottom: 1px solid rgba(139,0,0,0.1);
+}
+
+.pir-desc ul li::before {
+  content: '— ';
+  color: var(--red);
+}
+
+.pir-buy-wrap {
+  margin-top: 2vw;
+}
+
+.fenix-gastro-title {
+  font-size: 1.8vw;
+  letter-spacing: 0.2em;
+  text-align: center;
+  border: 1px solid var(--border);
+  margin: 3vw 8vw;
+  padding: 1.5vw;
+  text-transform: uppercase;
+}

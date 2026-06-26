@@ -1,0 +1,69 @@
+!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMWI — Сертификаты</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/js.js" charset="UTF-8" defer></script>
+</head>
+<body>
+<div class="bg-anim"><div class="bg-blob"></div><div class="bg-blob"></div><div class="bg-blob"></div></div>
+<div class="scroll-line" id="scrollLine"></div>
+<nav>
+    <a class="nav-logo" href="index.html">IMWI</a>
+    <div class="nav-links">
+        <a href="index.html#programs">Программы</a>
+        <a href="home.html">О нас</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+    </div>
+</nav>
+
+<div class="page-wrap">
+    <div class="certs-page">
+        <h1 class="fade-in">ВЫБЕРИТЕ ПОДАРОЧНЫЙ СЕРТИФИКАТ</h1>
+
+        <!-- РЯД 1: три карточки -->
+        <div class="certs-row fade-in">
+            <div class="cert-card" onclick="flipCert(this)">
+                <div class="cert-inner">
+                    <div class="cert-front"><span class="cert-label">СЕРТИФИКАТ</span><span class="cert-amount">12 000₽</span><span class="cert-brand">IMWI</span></div>
+                    <div class="cert-back"><p>Нажмите ещё раз, чтобы оформить</p><a href="payment.html" class="btn btn-filled" onclick="event.stopPropagation()">ОФОРМИТЬ</a></div>
+                </div>
+            </div>
+            <div class="cert-card" onclick="flipCert(this)">
+                <div class="cert-inner">
+                    <div class="cert-front"><span class="cert-label">СЕРТИФИКАТ</span><span class="cert-amount">24 000₽</span><span class="cert-brand">IMWI</span></div>
+                    <div class="cert-back"><p>Нажмите ещё раз, чтобы оформить</p><a href="payment.html" class="btn btn-filled" onclick="event.stopPropagation()">ОФОРМИТЬ</a></div>
+                </div>
+            </div>
+            <div class="cert-card" onclick="flipCert(this)">
+                <div class="cert-inner">
+                    <div class="cert-front"><span class="cert-label">СЕРТИФИКАТ</span><span class="cert-amount">36 000₽</span><span class="cert-brand">IMWI</span></div>
+                    <div class="cert-back"><p>Нажмите ещё раз, чтобы оформить</p><a href="payment.html" class="btn btn-filled" onclick="event.stopPropagation()">ОФОРМИТЬ</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- РЯД 2: две карточки по центру -->
+        <div class="certs-row certs-row--two fade-in">
+            <div class="cert-card" onclick="flipCert(this)">
+                <div class="cert-inner">
+                    <div class="cert-front"><span class="cert-label">СЕРТИФИКАТ</span><span class="cert-amount">48 000₽</span><span class="cert-brand">IMWI</span></div>
+                    <div class="cert-back"><p>Нажмите ещё раз, чтобы оформить</p><a href="payment.html" class="btn btn-filled" onclick="event.stopPropagation()">ОФОРМИТЬ</a></div>
+                </div>
+            </div>
+            <div class="cert-card" onclick="flipCert(this)">
+                <div class="cert-inner">
+                    <div class="cert-front"><span class="cert-label">СЕРТИФИКАТ</span><span class="cert-amount">60 000₽</span><span class="cert-brand">IMWI</span></div>
+                    <div class="cert-back"><p>Нажмите ещё раз, чтобы оформить</p><a href="payment.html" class="btn btn-filled" onclick="event.stopPropagation()">ОФОРМИТЬ</a></div>
+                </div>
+            </div>
+        </div>
+
+        <p class="certs-note fade-in">1 ужин равен 12 000 тыс. руб. *</p>
+    </div>
+</div>
+</body>
+</html>

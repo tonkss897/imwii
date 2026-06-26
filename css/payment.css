@@ -1,0 +1,68 @@
+/* ===== ORDER / PAYMENT PAGE ===== */
+.order-page {
+  padding: 6vw 8vw;
+  max-width: 60vw;
+  margin: 0 auto;
+}
+
+.order-page h1 {
+  font-size: 2.5vw;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 3vw;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.promo-toggle {
+  padding: 1.2vw 1.5vw;
+  border: 1px solid var(--border);
+  background: rgba(20, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 0.9vw;
+  color: var(--text2);
+  text-align: left;
+  width: 100%;
+  transition: border-color 0.3s;
+  font-family: 'Georgia', serif;
+}
+
+.promo-toggle:hover {
+  border-color: var(--red);
+}
+
+.promo-input-wrap {
+  display: none;
+}
+
+.order-total {
+  text-align: center;
+  font-size: 3vw;
+  padding: 2vw 0;
+}
+
+.submit-btn {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1.5vw;
+  border: 1px solid var(--red2);
+  background: transparent;
+  color: var(--red3);
+  font-size: 0.9vw;
+  letter-spacing: 0.3em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  font-family: 'Georgia', serif;
+}
+
+.submit-btn:hover {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}

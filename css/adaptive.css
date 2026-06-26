@@ -1,0 +1,106 @@
+@media (max-width: 1024px) {
+  .nav-logo { font-size: 2.5vw; }
+  .nav-links a { font-size: 1.8vw; }
+  .nav-links { gap: 4vw; }
+
+  .hero-title { font-size: 12vw; }
+  .hero-subtitle { font-size: 2vw; }
+
+  .about-sect,
+  .pir-desc,
+  .fenix-hero,
+  .lotus-about,
+  .team-sect,
+  .who-we-are,
+  .contacts-page,
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 4vw;
+  }
+
+  .program-card,
+  .program-card.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .program-card img { height: 50vw; }
+
+  .imwi-cards { grid-template-columns: repeat(2, 1fr); }
+  .ticket-cards { grid-template-columns: repeat(2, 1fr); }
+  .drinks-grid { grid-template-columns: 1fr 1fr; }
+  .imm-cards { grid-template-columns: repeat(2, 1fr); }
+  .vision-sect { grid-template-columns: 1fr; }
+  .certs-grid { grid-template-columns: repeat(2, 1fr); }
+  .faq-grid { grid-template-columns: 1fr; }
+  .values-wheel { grid-template-columns: repeat(2, 1fr); }
+
+  .sec-title { font-size: 4vw; }
+  .btn { font-size: 1.5vw; padding: 1.5vw 3vw; }
+}
+
+@media (max-width: 600px) {
+  nav { padding: 3vw 5vw; }
+  .nav-logo { font-size: 4vw; }
+  .nav-links { gap: 4vw; }
+  .nav-links a { font-size: 2.8vw; }
+
+  .hero-title { font-size: 14vw; }
+  .hero-subtitle { font-size: 3vw; }
+  .hero-btns { flex-direction: column; gap: 3vw; }
+
+  .imwi-cards { grid-template-columns: repeat(2, 1fr); gap: 2vw; }
+  .ticket-cards { grid-template-columns: 1fr; }
+  .drinks-grid { grid-template-columns: 1fr; }
+  .certs-grid { grid-template-columns: 1fr; }
+  .certs-grid-2 { grid-template-columns: 1fr; }
+  .program-btns { flex-direction: column; }
+  .lotus-food-grid { grid-template-columns: 1fr; }
+  .fenix-food-grid { grid-template-columns: 1fr; }
+  .cal-wrapper { grid-template-columns: 1fr; }
+
+  .about-sect,
+  .pir-desc,
+  .fenix-hero,
+  .lotus-about,
+  .team-sect,
+  .who-we-are,
+  .contacts-page,
+  .about-hero,
+  .vision-sect {
+    padding: 8vw 5vw;
+    grid-template-columns: 1fr;
+  }
+
+  .sec-title { font-size: 6vw; }
+  .gastro-title { font-size: 5vw; }
+  .gastro-desc { max-width: 90vw; font-size: 3.5vw; }
+  .sec-sub { font-size: 3.5vw; max-width: 90vw; }
+  .btn { font-size: 3vw; padding: 3vw 5vw; }
+
+  .vegan-banner { font-size: 3.5vw; margin: 4vw 5vw; }
+  .faq-q { font-size: 3.5vw; }
+  .faq-a { font-size: 3vw; }
+
+  .cal-month { font-size: 5vw; }
+  .cal-day { font-size: 3.5vw; min-height: 8vw; }
+  .cal-day-header { font-size: 3vw; padding: 2vw 0; }
+
+  .programs-sect { padding: 5vw; }
+  .program-info h3 { font-size: 5vw; }
+  .program-info p { font-size: 3.5vw; }
+  .program-card img { height: 60vw; }
+
+  .contact-footer { grid-template-columns: 1fr; padding: 8vw 5vw; }
+  .footer-logo { text-align: left; font-size: 10vw; }
+
+  .values-wheel { grid-template-columns: repeat(2, 1fr); gap: 4vw; }
+  .value-item { width: 35vw; }
+  .value-item img { width: 20vw; height: 20vw; }
+  .value-item h5 { font-size: 3vw; }
+
+  .order-page { padding: 8vw 5vw; max-width: 100%; }
+  .submit-btn { width: 80%; font-size: 3.5vw; }
+
+  .contacts-img { height: 70vw; }
+}

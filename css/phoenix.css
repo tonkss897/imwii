@@ -1,0 +1,40 @@
+/* ===== RITUAL FENIX PAGE ===== */
+.fenix-hero {
+  padding: 6vw 8vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
+  align-items: center;
+}
+
+.fenix-hero h1 {
+  font-size: 3vw;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.fenix-hero p {
+  font-size: 1vw;
+  line-height: 1.9;
+  color: var(--text2);
+  margin-top: 2vw;
+}
+
+.fenix-hero img {
+  width: 100%;
+  height: 30vw;
+  object-fit: cover;
+}
+
+.fenix-food-grid {
+  padding: 0 8vw 3vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+}
+
+.fenix-food-grid img {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+}

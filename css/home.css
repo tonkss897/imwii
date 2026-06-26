@@ -1,0 +1,106 @@
+/* ===== INDEX / HOME PAGE ===== */
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-bg-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; opacity: 0.55; z-index: 0;
+}
+.hero-bg-overlay {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(139,0,0,0.5) 0%, rgba(10,0,0,0.9) 70%);
+  z-index: 1;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  opacity: 0; transition: opacity 1.2s;
+}
+.hero-content.revealed { opacity: 1; }
+.hero-title { font-size: 8vw; letter-spacing: 0.3em; font-weight: 300; text-shadow: 0 0 40px var(--red-glow); }
+.hero-subtitle { font-size: 1.2vw; letter-spacing: 0.2em; color: var(--text2); margin-top: 1vw; line-height: 1.6; }
+.hero-btns { display: flex; gap: 2vw; justify-content: center; margin-top: 3vw; }
+.hero-hint {
+  position: absolute; bottom: 5vw; left: 50%; transform: translateX(-50%);
+  font-size: 0.9vw; color: var(--text3); letter-spacing: 0.3em; z-index: 2;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* О РЕСТОРАНЕ */
+.about-rest {
+  padding: 5vw 8vw;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; align-items: center;
+}
+.about-rest__text p { font-size: 1.1vw; line-height: 1.9; color: var(--text2); margin-bottom: 1.5vw; }
+.about-rest__text em { color: var(--text); font-style: normal; }
+.about-rest__links { display: flex; gap: 1.5vw; align-items: center; margin-top: 1vw; }
+.about-rest__links span { font-size: 0.9vw; color: var(--red3); letter-spacing: 0.2em; }
+.about-rest__links .dot { color: var(--red); }
+.about-rest__slider .slider-wrap img { width: 100%; display: none; }
+.about-rest__slider .slider-wrap img.active { display: block; }
+
+/* НАШИ ПРОГРАММЫ */
+.program-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4vw;
+  margin: 0 8vw 4vw; padding: 3vw;
+  border: 1px solid var(--border);
+  background: rgba(20,0,0,0.5);
+  align-items: center; transition: border-color 0.3s;
+}
+.program-row:hover { border-color: var(--red); }
+.program-row--reverse { direction: rtl; }
+.program-row--reverse > * { direction: ltr; }
+.program-row img { width: 100%; height: 25vw; object-fit: cover; }
+.program-row__info h3 { font-size: 1.8vw; letter-spacing: 0.1em; margin-bottom: 1.5vw; }
+.program-row__info p { font-size: 1vw; line-height: 1.8; color: var(--text2); margin-bottom: 2vw; }
+.program-row__btns { display: flex; gap: 1.5vw; flex-wrap: wrap; }
+
+/* IMWI — ЭТО */
+.imwi-is { padding: 4vw 8vw; text-align: center; }
+.imwi-is__title { font-size: 2.5vw; font-weight: 300; }
+.imwi-is__dash { font-size: 2.5vw; color: var(--text2); }
+.imwi-is__sub { font-size: 1vw; color: var(--text3); letter-spacing: 0.2em; margin: 1vw 0 3vw; }
+.imwi-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5vw; }
+.imwi-card { overflow: hidden; transition: transform 0.3s; }
+.imwi-card:hover { transform: translateY(-3px); }
+.imwi-card img { width: 100%; display: block; }
+
+/* SHOW FILTER */
+.show-filter { display: flex; gap: 1vw; padding: 2vw 8vw 0; flex-wrap: wrap; }
+.sf-btn {
+  padding: 0.6vw 1.8vw;
+  border: 1px solid var(--border);
+  background: transparent; color: var(--text2);
+  font-size: 0.9vw; cursor: pointer; letter-spacing: 0.1em;
+  transition: all 0.3s; font-family: Georgia,serif;
+}
+.sf-btn:hover, .sf-btn--active {
+  border-color: var(--red3); color: var(--text);
+  background: rgba(139,0,0,0.25);
+}
+
+/* FAQ */
+.faq-sect { padding: 3vw 8vw; }
+.faq-intro { text-align: center; font-size: 0.9vw; color: var(--text3); margin-bottom: 3vw; }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4vw; }
+.faq-item { border-bottom: 1px solid var(--border); padding: 1.5vw 0; cursor: pointer; }
+.faq-q { font-size: 0.95vw; color: var(--text2); display: flex; justify-content: space-between; align-items: center; gap: 1vw; }
+.faq-q span { color: var(--red3); font-size: 1.2vw; transition: transform 0.3s; }
+.faq-a { font-size: 0.9vw; color: var(--text3); line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height 0.4s, padding 0.3s; }
+.faq-item.open .faq-a { max-height: 20vw; padding-top: 1vw; }
+.faq-item.open .faq-q span { transform: rotate(45deg); }
+
+/* КОНТАКТЫ ФУТЕР */
+.home-contacts { padding: 4vw 8vw; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; }
+.home-contacts__info p { font-size: 1vw; color: var(--text2); margin-bottom: 1vw; line-height: 1.8; }
+.home-contacts__info a { color: var(--text); text-decoration: none; }
+.home-contacts__logo { font-size: 5vw; color: var(--border); letter-spacing: 0.2em; text-align: right; font-weight: 300; align-self: end; }

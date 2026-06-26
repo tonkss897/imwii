@@ -1,0 +1,58 @@
+/* ===== ABOUT PAGE ===== */
+.about-top { padding: 6vw 8vw; display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; align-items: center; }
+.about-top__text h1 { font-size: 6vw; font-weight: 300; letter-spacing: 0.05em; margin-bottom: 2vw; }
+.about-top__text p { font-size: 1.1vw; line-height: 1.9; color: var(--text2); }
+.about-top__img img { width: 100%; height: 30vw; object-fit: cover; }
+
+/* Иммерсивный ресторан — это */
+.imm-sect { padding: 3vw 8vw; }
+.imm-sect__title { font-size: 2.5vw; text-align: center; color: var(--red3); margin-bottom: 3vw; letter-spacing: 0.05em; }
+.imm-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5vw; }
+.imm-card {
+  padding: 2vw; border: 1px solid var(--border);
+  background: rgba(15,0,0,0.7); cursor: pointer;
+  transition: all 0.3s; opacity: 0; transform: scale(0.9);
+}
+.imm-card.revealed { opacity: 1; transform: none; }
+.imm-card:hover { border-color: var(--red3); box-shadow: 0 0 20px rgba(200,50,50,0.3); }
+.imm-num { display: block; font-size: 2.5vw; color: rgba(139,0,0,0.4); font-weight: bold; }
+.imm-label { display: block; font-size: 0.85vw; letter-spacing: 0.2em; margin-top: 0.5vw; text-transform: uppercase; }
+
+/* Кто мы */
+.who-sect { padding: 4vw 8vw; }
+.who-sect__label { font-size: 0.85vw; letter-spacing: 0.25em; color: var(--text3); text-transform: uppercase; margin-bottom: 2vw; padding-bottom: 1vw; border-bottom: 1px solid var(--border); }
+.who-sect__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; }
+.wwa-left p, .wwa-right p { font-size: 1vw; line-height: 1.9; color: var(--text2); }
+
+/* Видение */
+.vision-sect { padding: 3vw 8vw; display: grid; grid-template-columns: repeat(3,1fr); gap: 2vw; }
+.vision-col { padding: 2vw; border: 1px solid var(--border); background: rgba(10,0,0,0.5); opacity: 0; transform: translateY(20px); transition: all 0.6s; }
+.vision-col.visible { opacity: 1; transform: none; }
+.vision-col:nth-child(2).visible { transition-delay: 0.2s; }
+.vision-col:nth-child(3).visible { transition-delay: 0.4s; }
+.vision-col h4 { font-size: 0.85vw; letter-spacing: 0.25em; color: var(--red3); text-transform: uppercase; margin-bottom: 1.5vw; }
+.vision-col p { font-size: 0.9vw; line-height: 1.8; color: var(--text2); }
+
+/* Ценности */
+.values-sect { padding: 4vw 8vw; }
+.values-wheel { display: grid; grid-template-columns: repeat(3,1fr); gap: 3vw; justify-items: center; }
+.value-item { text-align: center; width: 12vw; }
+.value-item img { width: 8vw; height: 8vw; object-fit: contain; margin: 0 auto 1vw; display: block; animation: spinSlow 10s linear infinite; }
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+.value-item h5 { font-size: 0.8vw; letter-spacing: 0.25em; color: var(--text2); text-transform: uppercase; }
+
+/* Цитата */
+.about-quote { padding: 4vw 8vw; text-align: center; font-size: 2.5vw; font-weight: 300; line-height: 1.5; }
+.about-quote__sub { display: flex; justify-content: center; gap: 3vw; margin-top: 2vw; }
+.about-quote__sub span { font-size: 0.85vw; color: var(--red3); letter-spacing: 0.2em; }
+.about-quote__sub .dot { color: var(--red); }
+.about-quote__btns { display: flex; gap: 2vw; justify-content: center; margin-top: 2.5vw; }
+.page-logo-end { text-align: right; padding: 2vw 8vw; font-size: 4vw; color: var(--border); letter-spacing: 0.2em; }
+
+/* ===== CONTACTS PAGE ===== */
+.contacts-sect { padding: 6vw 8vw; display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; align-items: center; }
+.contacts-sect__info h1 { font-size: 5vw; font-weight: 300; letter-spacing: 0.05em; margin-bottom: 3vw; }
+.contacts-sect__details p { font-size: 1.1vw; color: var(--text2); margin-bottom: 1.5vw; line-height: 1.8; }
+.contacts-sect__details a { color: var(--text); text-decoration: underline; text-decoration-color: var(--red); }
+.contacts-sect__btns { display: flex; gap: 2vw; margin-top: 3vw; }
+.contacts-sect__img img { width: 100%; height: 50vw; object-fit: cover; }

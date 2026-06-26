@@ -1,0 +1,106 @@
+!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMWI — Сад Лотоса</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/js.js" charset="UTF-8" defer></script>
+</head>
+<body>
+<div class="bg-anim"><div class="bg-blob"></div><div class="bg-blob"></div><div class="bg-blob"></div></div>
+<div class="scroll-line" id="scrollLine"></div>
+<nav>
+    <a class="nav-logo" href="index.html">IMWI</a>
+    <div class="nav-links">
+        <a href="index.html#programs">Программы</a>
+        <a href="home.html">О нас</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+    </div>
+</nav>
+
+<div class="page-wrap">
+
+    <!-- HERO — сначала изображение, клик = название -->
+    <section class="lotus-hero" onclick="revealLotusTitle()">
+        <img src="./img/lotus-hall.jpg" class="lotus-hero__img" alt="Сад Лотоса">
+        <div class="lotus-hero__overlay"></div>
+        <h1 class="lotus-hero__title" id="lotusTitleEl">Сад Лотоса</h1>
+    </section>
+
+    <!-- О ШОУ -->
+    <section class="lotus-about fade-in">
+        <div class="lotus-about__col">
+            <h2>О ШОУ <span class="age-badge">16+</span></h2>
+            <p>Спокойное и медитативное путешествие, вдохновлённое садами древнего Китая, чайными церемониями и образом лотоса как символа гармонии и внутреннего очищения.</p>
+        </div>
+        <div class="lotus-about__col">
+            <p>Мягкий свет, вода, туман и плавные проекции создают пространство созерцания, где гастрономия становится продолжением тишины.</p>
+        </div>
+    </section>
+
+    <!-- Полноширинное фото -->
+    <img src="./img/lotus-full.jpg" class="lotus-full-img fade-in" alt="Сад Лотоса — зал">
+
+    <!-- ГАСТРОНОМИЧЕСКИЙ СЕТ -->
+    <h2 class="gastro-title fade-in">ГАСТРОНОМИЧЕСКИЙ СЕТ</h2>
+    <p class="gastro-desc fade-in">Авторский сет, вдохновлённый атмосферой китайских садов и чайных церемоний. Лёгкие текстуры, природные оттенки, дым, цветочные ароматы и деликатные вкусы становятся продолжением визуального повествования. Каждая подача поддерживает настроение сцены и усиливает ощущение спокойствия и погружения.</p>
+
+    <!-- Два слайдера (основной + веганский) -->
+    <div class="lotus-food-row fade-in">
+        <div class="lotus-food-col">
+            <div class="lotus-food-img-wrap">
+                <img id="lotusMegaImg1" src="./img/сетлотос1.png" alt="Основной сет">
+                <div class="lotus-food-arrows">
+                    <button class="arrow-btn" onclick="slideLotusFood(0,-1)">&#8249;</button>
+                    <button class="arrow-btn" onclick="slideLotusFood(0,1)">&#8250;</button>
+                </div>
+            </div>
+            <h4>ОСНОВНОЙ</h4>
+            <p>Сет, построенный на балансе вкусов, натуральных ингредиентах и мягких сочетаниях. Каждая нота трав, овощей, рыба и тонкие соусы создают ощущение гармонии и визуальной чистоты.</p>
+        </div>
+        <div class="lotus-food-col">
+            <div class="lotus-food-img-wrap">
+                <img id="lotusMegaImg2" src="./img/сетвеганлотос1.png" alt="Веганский сет">
+                <div class="lotus-food-arrows">
+                    <button class="arrow-btn" onclick="slideLotusFood(1,-1)">&#8249;</button>
+                    <button class="arrow-btn" onclick="slideLotusFood(1,1)">&#8250;</button>
+                </div>
+            </div>
+            <h4>ВЕГАНСКИЙ</h4>
+            <p>Лёгкий растительный сет, вдохновлённый природой китайского сада. Цветочные оттенки, свежие текстуры и минималистичная подача поддерживают настроение сцены.</p>
+        </div>
+    </div>
+
+    <!-- КАЛЕНДАРЬ -->
+    <section class="calendar-section fade-in">
+        <div id="cal-lotus"></div>
+    </section>
+
+    <!-- КОМАНДА — слайдер (фото + текст меняются) -->
+    <section class="team-sect fade-in">
+        <div class="team-img-wrap">
+            <img src="./img/режиссер.png" id="teamImg" alt="Команда">
+            <div class="team-arrows">
+                <button class="arrow-btn" onclick="slideTeam(-1)">&#8249;</button>
+                <button class="arrow-btn" onclick="slideTeam(1)">&#8250;</button>
+            </div>
+        </div>
+        <div class="team-info">
+            <div class="team-label">КОМАНДА</div>
+            <h3 id="teamName">U-wei</h3>
+            <div class="team-role" id="teamRole">РЕЖИССЁР ПОСТАНОВЩИК-ПРОЕКТА</div>
+            <p id="teamDesc">Создаёт визуальную драматургию спектакля, соединяя сценическое действие, свет, звук и гастрономию в единое пространство переживания. В основе его работы — медитативный ритм, минимализм и внимание к деталям, характерные для эстетики восточного театра.</p>
+        </div>
+    </section>
+
+    <!-- НИЖНЯЯ ПАНЕЛЬ -->
+    <div class="bottom-bar">
+        <h4>КУПИТЬ БИЛЕТЫ НА ШОУ САД ЛОТОСА</h4>
+        <a href="payment.html" class="btn btn-filled">КУПИТЬ БИЛЕТ</a>
+    </div>
+
+</div>
+</body>
+</html>
